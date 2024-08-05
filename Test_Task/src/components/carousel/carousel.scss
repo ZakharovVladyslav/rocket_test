@@ -1,0 +1,83 @@
+.embla {
+   user-select: none;
+
+   max-width: 100%;
+   margin: auto;
+}
+
+.embla__viewport {
+   overflow: hidden;
+}
+
+.embla__container {
+   backface-visibility: hidden;
+
+   display: flex;
+   gap: 10px;
+
+   touch-action: pan-y pinch-zoom;
+
+   &:last-child {
+      padding-right: 10px;
+   }
+}
+
+.embla__slide {
+   flex: 0 0 fit-content;
+
+   box-sizing: border-box;
+
+   color: white;
+
+   &:nth-child(1) {
+      padding-left: 0;
+   }
+
+   &:last-child {
+      margin-right: 10px;
+   }
+}
+
+.embla__footer {
+   display: flex;
+   justify-content: space-between;
+   align-content: center;
+}
+
+.embla__button {
+   background: transparent;
+   border: none;
+   font-size: 2rem;
+   cursor: pointer;
+   z-index: 1;
+
+   color: white;
+}
+
+.embla__dots {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 12px;
+}
+
+.embla__dot {
+   min-width: 16px;
+   width: 16px;
+   min-height: 16px;
+   height: 16px;
+
+   border-radius: 50%;
+   border: 0;
+
+   background: rgba(white, 0.4);
+
+   cursor: pointer;
+
+   padding-inline: 0;
+   line-height: 0;
+}
+
+.embla__dot.is-selected {
+   background: white;
+}
